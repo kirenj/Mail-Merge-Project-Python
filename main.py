@@ -16,12 +16,11 @@ def open_names():
     return names
 
 
-letter_number = 1
 
 names = open_names()
 
 for i in names:
-  letter_name = f'letter {letter_number}'
+  letter_name = f'letter_for_{i}'
   save_path = f'Mail Merge Project Start/Output/ReadyToSend/{letter_name}.txt'
   with open('Mail Merge Project Start/Input/Letters/starting_letter.txt', mode='r') as file:
     content_read = file.read()
@@ -29,5 +28,5 @@ for i in names:
     
   with open(save_path, mode='w') as new_letter:    
     new_letter.write(content)
-  letter_number += 1
+  
   
